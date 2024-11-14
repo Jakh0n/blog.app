@@ -6,7 +6,7 @@ import {
 import './globals.css'
 import { ChildProps } from '@/types'
 import { ThemeProvider } from '@/components/providers/theme-provider'
-
+import { ClerkProvider } from '@clerk/nextjs'
 const creteRounnd = CreteRound({
 	weight: ['400'],
 	subsets: ['latin'],
@@ -28,19 +28,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: ChildProps) {
 	return (
-		<html lang='en' suppressHydrationWarning>
-			<body
-				className={` ${creteRounnd.variable} ${workSans.variable} antialiased`}
-			>
-				<ThemeProvider
-					attribute='class'
-					defaultTheme='system'
-					enableSystem
-					disableTransitionOnChange
+		<ClerkProvider>
+			<html lang='en' suppressHydrationWarning>
+				<body
+					className={` ${creteRounnd.variable} ${workSans.variable} antialiased`}
 				>
-					{children}
-				</ThemeProvider>
-			</body>
-		</html>
+					<ThemeProvider
+						attribute='class'
+						defaultTheme='system'
+						enableSystem
+						disableTransitionOnChange
+					>
+						{children}
+					</ThemeProvider>
+				</body>
+			</html>
+		</ClerkProvider>
 	)
 }
