@@ -17,7 +17,7 @@ import {
 import { Button } from '@/components/ui/button'
 import { useTheme } from 'next-themes'
 import { dark } from '@clerk/themes'
-import SignupPage from './Signup'
+
 function Navbar() {
 	const { resolvedTheme } = useTheme()
 	const pathName = usePathname()
