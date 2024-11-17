@@ -57,8 +57,7 @@ export const blogs = [
 		image: '/blogs/03.jpg',
 	},
 	{
-		title:
-			'How to hire a developer straight out of bootcamp — without getting burned',
+		title: 'How to hire a developer  out of bootcamp — without getting burned',
 		description:
 			'There’s a worldwide talent shortage in software development, and nearly one-third of hiring managers have hired someone from a coding bootcamp to.',
 		author: 'Samar',
